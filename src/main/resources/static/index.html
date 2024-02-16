@@ -2,10 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bilettsystem</title>
+    <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-        <h1>Test</h1>
-<h2> helo </h2>
+        <h1>Bestilling av kinobiletter</h1>
+        <hr>
+    <form method="post" onsubmit="kjopBillett(); return false;" >
+        <label id="filmvelger">
+
+            Velg film:
+            <select id="filmvalg">
+                <option value>Velg film her</option>
+                <option value="To på rømmen">To på rømmen</option>
+                <option value="Den Lille Havfruen">Den Lille Havfruen</option>
+                <option value="Harry Potter og de vises stein">Harry Potter og de vises stein</option>
+                <option value="Mean Girls">Mean Girls</option>
+                <option value="Titanic">Titanic</option>
+                <option value="James Bond-Skyfall">James Bond-Skyfall</option>
+                <option value="Konvoi">Konvoi</option>
+            </select>
+
+        </label>
+        <table>
+            <tr>
+                <td>
+                   <label for="anntall">Antall:</label>
+
+                </td>
+                <td>
+                    <input type="number" id="anntall" min="0">
+                </td>
+                <td>
+                    <div id = "feilAntall"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="navn">Fornavn:</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="navn">
+                </td>
+                <td>
+                    <div id = "feilNavn"></div>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="etternavn">Etternavn:</label>
+                </td>
+                <td>
+                    <input type="text"
+                           id="etternavn">
+                </td>
+                <td>
+                    <div id = "feilEtternavn"></div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="telefon">TelefonNr:</label>
+                </td>
+                <td>
+                    <input type="number"
+                           id="telefon"
+                           pattern="[0-9]{8}"
+                           min="0">
+                </td>
+                <td>
+                    <div id = "feilTelefon"></div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="epost">E-post:</label>
+                </td>
+                <td>
+                    <input type="email"
+                           id="epost">
+                </td>
+                <td>
+                    <div id = "feilEpost"></div>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <button type = "submit" > Kjøp billett</button>
+    </form>
+
+
+    <br>
+    <h2>Alle Biletter</h2>
+    <button onClick="slettAlleBilletter()">Slett alle bilettene</button>
+        <br>
+        <br>
+<span id="billettinfo"> Her:  </span>
+
 </body>
 </html>
