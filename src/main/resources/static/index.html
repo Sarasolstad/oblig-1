@@ -25,85 +25,47 @@
 
         </label>
         <table>
-            <tr>
-                <td>
-                   <label for="anntall">Antall:</label>
+            <tr><td><label for="antall">Antall:</label></td><td>
+                <input type="number" id="antall" min="0">
+            </td><td><div id = "feilAntall"></div></td></tr>
 
-                </td>
-                <td>
-                    <input type="number" id="anntall" min="0">
-                </td>
-                <td>
-                    <div id = "feilAntall"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="navn">Fornavn:</label>
-                </td>
-                <td>
-                    <input type="text"
-                           id="navn">
-                </td>
-                <td>
-                    <div id = "feilNavn"></div>
-                </td>
 
-            </tr>
 
-            <tr>
-                <td>
-                    <label for="etternavn">Etternavn:</label>
-                </td>
-                <td>
-                    <input type="text"
-                           id="etternavn">
-                </td>
-                <td>
-                    <div id = "feilEtternavn"></div>
-                </td>
-            </tr>
+            <tr><td><label for="navn">Fornavn:</label></td><td>
+                    <input type="text" id="navn">
+            </td><td><div id = "feilNavn"></div></td></tr>
 
-            <tr>
-                <td>
-                    <label for="telefon">TelefonNr:</label>
-                </td>
-                <td>
-                    <input type="number"
-                           id="telefon"
-                           pattern="[0-9]{8}"
-                           min="0">
-                </td>
-                <td>
-                    <div id = "feilTelefon"></div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label for="epost">E-post:</label>
-                </td>
-                <td>
-                    <input type="email"
-                           id="epost">
-                </td>
-                <td>
-                    <div id = "feilEpost"></div>
-                </td>
-            </tr>
+
+
+            <tr><td><label for="etternavn">Etternavn:</label>
+            </td><td><input type="text" id="etternavn">
+                </td><td><div id = "feilEtternavn"></div></td></tr>
+
+
+            <tr><td><label for="telefon">TelefonNr:</label></td><td>
+                    <input type="number" id="telefon" pattern="[0-9]{8}" min="0">
+                </td><td><div id = "feilTelefon"></div></td></tr>
+
+
+
+            <tr><td><label for="epost">E-post:</label></td><td>
+                    <input type="email" id="epost"></td><td>
+                    <div id = "feilEpost"></div></td></tr>
         </table>
 
         <br>
+        <br>
 
-        <button type = "submit" > Kjøp billett</button>
+
+        <button type = "button"  onclick="kjopBillett()"> Kjøp billett</button>
     </form>
-
 
     <br>
     <h2>Alle Biletter</h2>
     <button onClick="slettAlleBilletter()">Slett alle bilettene</button>
         <br>
         <br>
-<span id="billettinfo"> Her:  </span>
+<span id="billettinfo"> billettinfo: </span>
 
 </body>
 </html>

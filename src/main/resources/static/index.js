@@ -19,6 +19,7 @@ function kjopBillett() {
         "telefon": valgtTelefon,
         "epost": valgtEpost
     }
+    console.log("Dettte er i kjøpBillet")
 
 
     if (document.getElementById("antall").value === "") {
@@ -40,13 +41,9 @@ function kjopBillett() {
         document.getElementById("feilEpost").innerText = "Skriv inn gyldig e-post!";
     }
 
-
     billetter.push(hentInfo);
     console.log(hentInfo);
-    out(hentInfo);
-    }
-
-
+    visBiletter()
 
     document.getElementById("filmvalg").value="";
     document.getElementById("antall").value="";
@@ -54,11 +51,16 @@ function kjopBillett() {
     document.getElementById("etternavn").value="";
     document.getElementById("epost").value="";
     document.getElementById("telefon").value="";
+}
 
 
 
-    function visBiletter(){
-    let ut = "Billettbestilling" + " ";
+
+
+
+
+function visBiletter(){
+    let ut = "Din Bestilling:" + " ";
 
     ut += "<table><tr><td>Navn</td> " +
         "<td>Etternavn </td> " +
@@ -85,9 +87,9 @@ function kjopBillett() {
 
 
 // Funksjon for å slette alle billetter
-    function slettAlleBilletter() {
+function slettAlleBilletter() {
     billetter = [];
     console.log(billetter);
     visBiletter();
-    }
+}
 
