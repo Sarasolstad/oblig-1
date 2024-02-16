@@ -21,9 +21,9 @@ function kjopBillett() {
     }
     console.log("Dettte er i kjøpBillet")
 
-    if (document.getElementById("Film").value === "") {
-        document.getElementById("feilFilm").innerText = "Du må fylle ut Antall!";
-
+        if (document.getElementById("filmvalg").value === "Velg film her") {
+        document.getElementById("feilFilm").innerText = "Du må Velge en film!";
+        }
         if (document.getElementById("antall").value === "") {
             document.getElementById("feilAntall").innerText = "Du må fylle ut Antall!";
         }
@@ -89,5 +89,5 @@ function kjopBillett() {
         console.log(billetter);
         visBiletter();
     }
-}
+
 
